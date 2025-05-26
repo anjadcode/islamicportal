@@ -1,0 +1,23 @@
+{
+  "name": "islamic-prayer-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:next": "cd next-app && npm run dev",
+    "dev:express": "cd express-server && npm run dev",
+    "dev": "concurrently \"npm:dev:next\" \"npm:dev:express\"",
+    "build:next": "cd next-app && npm run build",
+    "build:express": "cd express-server && npm run build",
+    "build": "npm run build:next && npm run build:express",
+    "start:next": "cd next-app && npm run start",
+    "start:express": "cd express-server && npm run start",
+    "start": "concurrently \"npm:start:next\" \"npm:start:express\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
