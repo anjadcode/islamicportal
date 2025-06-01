@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "express-server/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "express-server/index.js"
+    }
+  ],
+  "buildCommand": "npm install --prefix express-server && npm install --prefix next-app && npm run build --prefix next-app"
+}

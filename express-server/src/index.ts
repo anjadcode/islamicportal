@@ -14,7 +14,8 @@ const app: Express = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: 'http://localhost:3000' // Allow Next.js frontend
+  //origin: 'http://localhost:3000' // Allow Next.js frontend
+  origin: '*' // Allow Next.js frontend
 }));
 app.use(express.json());
 
@@ -28,6 +29,10 @@ app.use('/api/hadith-of-the-day', hadithRouter);
 app.use('/api/get-ip', getiplocation);
 app.use("/api/holidays", holidays); // Mount the holidays route
 
+/*
 app.listen(port, () => {
   console.log(`🕌 Express server running at http://localhost:${port}`);
 });
+*/
+
+module.exports = app;

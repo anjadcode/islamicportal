@@ -1,0 +1,25 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  @apply bg-islamic-white text-text-primary;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Optional: Minimalist scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-islamic-white;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-islamic-green-light rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-islamic-green;
+}
